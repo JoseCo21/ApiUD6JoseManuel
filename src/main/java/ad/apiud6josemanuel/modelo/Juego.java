@@ -13,6 +13,7 @@ public class Juego {
     long id;
     @NotBlank(message = "El nombre no puede estar vacio")
     String nombre;
+    @NotBlank(message = "La plataforma no puede estar vacia")
     String plataforma;
 
     public Juego() {

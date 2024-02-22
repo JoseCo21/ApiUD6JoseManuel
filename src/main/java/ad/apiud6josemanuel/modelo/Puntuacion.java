@@ -1,14 +1,16 @@
 package ad.apiud6josemanuel.modelo;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity(name = "puntuaciones")
 public class Puntuacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
-
+    @NotBlank(message = "El nombre no puede estar vacio")
     String nombre;
+    @NotBlank(message = "La puntuacion no puede estar vacia")
     int puntos;
     @ManyToOne
     @JoinColumn(name = "id_juego")
