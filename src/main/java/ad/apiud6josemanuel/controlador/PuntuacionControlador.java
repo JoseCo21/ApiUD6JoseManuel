@@ -62,6 +62,7 @@ public class PuntuacionControlador {
         puntuacionRepositorio.deleteById(id);
 
     }
+    //Obtener todas las puntuaciones de un juego
     @GetMapping("/juego/{idJuego}")
     public List<Puntuacion> obtenerPuntuacionesJuego(@PathVariable Long idJuego){
         return puntuacionRepositorio.findByJuegoId(idJuego);
